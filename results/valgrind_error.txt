@@ -1,0 +1,132 @@
+==130008== Memcheck, a memory error detector
+==130008== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==130008== Using Valgrind-3.15.0-608cb11914-20190413 and LibVEX; rerun with -h for copyright info
+==130008== Command: ./app/shell-app
+==130008== 
+--130008-- Valgrind options:
+--130008--    --leak-check=full
+--130008--    -v
+--130008-- Contents of /proc/version:
+--130008--   Linux version 5.15.0-46-generic (buildd@lcy02-amd64-007) (gcc (Ubuntu 9.4.0-1ubuntu1~20.04.1) 9.4.0, GNU ld (GNU Binutils for Ubuntu) 2.34) #49~20.04.1-Ubuntu SMP Thu Aug 4 19:15:44 UTC 2022
+--130008-- 
+--130008-- Arch and hwcaps: AMD64, LittleEndian, amd64-cx16-lzcnt-rdtscp-sse3-ssse3-avx-avx2-bmi-f16c-rdrand
+--130008-- Page sizes: currently 4096, max supported 4096
+--130008-- Valgrind library directory: /usr/lib/x86_64-linux-gnu/valgrind
+--130008-- Reading syms from /home/mahima/Desktop/git/cpp-boilerplate/build/app/shell-app
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/ld-2.31.so
+--130008--   Considering /usr/lib/debug/.build-id/45/87364908de169dec62ffa538170118c1c3a078.debug ..
+--130008--   .. build-id is valid
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux
+--130008--    object doesn't have a symbol table
+--130008--    object doesn't have a dynamic symbol table
+--130008-- Scheduler: using generic scheduler lock implementation.
+--130008-- Reading suppressions file: /usr/lib/x86_64-linux-gnu/valgrind/default.supp
+==130008== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-130008-by-mahima-on-???
+==130008== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-130008-by-mahima-on-???
+==130008== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-130008-by-mahima-on-???
+==130008== 
+==130008== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==130008== don't want to do, unless you know exactly what you're doing,
+==130008== or are doing some strange experiment):
+==130008==   /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=130008 ...command...
+==130008== 
+==130008== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==130008==   /path/to/gdb ./app/shell-app
+==130008== and then give GDB the following command
+==130008==   target remote | /usr/lib/x86_64-linux-gnu/valgrind/../../bin/vgdb --pid=130008
+==130008== --pid is optional if only one valgrind process is running
+==130008== 
+--130008-- REDIR: 0x4022e20 (ld-linux-x86-64.so.2:strlen) redirected to 0x580c9ce2 (???)
+--130008-- REDIR: 0x4022bf0 (ld-linux-x86-64.so.2:index) redirected to 0x580c9cfc (???)
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_core-amd64-linux.so
+--130008--    object doesn't have a symbol table
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so
+--130008--    object doesn't have a symbol table
+==130008== WARNING: new redirection conflicts with existing -- ignoring it
+--130008--     old: 0x04022e20 (strlen              ) R-> (0000.0) 0x580c9ce2 ???
+--130008--     new: 0x04022e20 (strlen              ) R-> (2007.0) 0x0483f060 strlen
+--130008-- REDIR: 0x401f600 (ld-linux-x86-64.so.2:strcmp) redirected to 0x483ffd0 (strcmp)
+--130008-- REDIR: 0x4023380 (ld-linux-x86-64.so.2:mempcpy) redirected to 0x4843a20 (mempcpy)
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.28
+--130008--    object doesn't have a symbol table
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/libgcc_s.so.1
+--130008--    object doesn't have a symbol table
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/libc-2.31.so
+--130008--   Considering /usr/lib/debug/.build-id/18/78e6b475720c7c51969e69ab2d276fae6d1dee.debug ..
+--130008--   .. build-id is valid
+--130008-- Reading syms from /usr/lib/x86_64-linux-gnu/libm-2.31.so
+--130008--   Considering /usr/lib/debug/.build-id/fe/91b4090ea04c1559ff71dd9290062776618891.debug ..
+--130008--   .. build-id is valid
+--130008-- REDIR: 0x4b26480 (libc.so.6:memmove) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25780 (libc.so.6:strncpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b267b0 (libc.so.6:strcasecmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b250a0 (libc.so.6:strcat) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b257e0 (libc.so.6:rindex) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b27c50 (libc.so.6:rawmemchr) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b42ce0 (libc.so.6:wmemchr) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b42820 (libc.so.6:wcscmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b265e0 (libc.so.6:mempcpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26410 (libc.so.6:bcmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25710 (libc.so.6:strncmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25150 (libc.so.6:strcmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26540 (libc.so.6:memset) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b427e0 (libc.so.6:wcschr) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25670 (libc.so.6:strnlen) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25230 (libc.so.6:strcspn) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26800 (libc.so.6:strncasecmp) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b251d0 (libc.so.6:strcpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26950 (libc.so.6:memcpy@@GLIBC_2.14) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b43f50 (libc.so.6:wcsnlen) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b42860 (libc.so.6:wcscpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25820 (libc.so.6:strpbrk) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25100 (libc.so.6:index) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25630 (libc.so.6:strlen) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b2ebb0 (libc.so.6:memrchr) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26850 (libc.so.6:strcasecmp_l) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b263d0 (libc.so.6:memchr) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b42930 (libc.so.6:wcslen) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b25ae0 (libc.so.6:strspn) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b26750 (libc.so.6:stpncpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b266f0 (libc.so.6:stpcpy) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b27c90 (libc.so.6:strchrnul) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4b268a0 (libc.so.6:strncasecmp_l) redirected to 0x48331d0 (_vgnU_ifunc_wrapper)
+--130008-- REDIR: 0x4c0e500 (libc.so.6:__strrchr_avx2) redirected to 0x483ea10 (rindex)
+--130008-- REDIR: 0x4b200e0 (libc.so.6:malloc) redirected to 0x483b780 (malloc)
+--130008-- REDIR: 0x4c0e6d0 (libc.so.6:__strlen_avx2) redirected to 0x483ef40 (strlen)
+--130008-- REDIR: 0x4c0acc0 (libc.so.6:__memcmp_avx2_movbe) redirected to 0x48421e0 (bcmp)
+--130008-- REDIR: 0x4c09bd0 (libc.so.6:__strcmp_avx2) redirected to 0x483fed0 (strcmp)
+--130008-- REDIR: 0x4c116c0 (libc.so.6:__mempcpy_avx_unaligned_erms) redirected to 0x4843660 (mempcpy)
+--130008-- REDIR: 0x4933b20 (libstdc++.so.6:operator new(unsigned long)) redirected to 0x483bdf0 (operator new(unsigned long))
+Averaged sensor reading: 10
+==130008== Conditional jump or move depends on uninitialised value(s)
+==130008==    at 0x10A31B: main (main.cpp:9)
+==130008== 
+--130008-- REDIR: 0x4b206d0 (libc.so.6:free) redirected to 0x483c9d0 (free)
+==130008== 
+==130008== HEAP SUMMARY:
+==130008==     in use at exit: 44 bytes in 2 blocks
+==130008==   total heap usage: 4 allocs, 2 frees, 76,844 bytes allocated
+==130008== 
+==130008== Searching for pointers to 2 not-freed blocks
+==130008== Checked 112,168 bytes
+==130008== 
+==130008== 44 (24 direct, 20 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 2
+==130008==    at 0x483BE63: operator new(unsigned long) (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==130008==    by 0x10A46E: AnalogSensor::Read() (AnalogSensor.cpp:16)
+==130008==    by 0x10A2F7: main (main.cpp:7)
+==130008== 
+==130008== LEAK SUMMARY:
+==130008==    definitely lost: 24 bytes in 1 blocks
+==130008==    indirectly lost: 20 bytes in 1 blocks
+==130008==      possibly lost: 0 bytes in 0 blocks
+==130008==    still reachable: 0 bytes in 0 blocks
+==130008==         suppressed: 0 bytes in 0 blocks
+==130008== 
+==130008== Use --track-origins=yes to see where uninitialised values come from
+==130008== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==130008== 
+==130008== 1 errors in context 1 of 2:
+==130008== Conditional jump or move depends on uninitialised value(s)
+==130008==    at 0x10A31B: main (main.cpp:9)
+==130008== 
+==130008== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
